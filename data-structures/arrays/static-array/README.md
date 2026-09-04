@@ -14,17 +14,17 @@ The array size is defined by the `N` template parameter and cannot be changed at
 
 ## Operations
 
-- `inicialize()`???
 - `operator[]`
 - `size()`
+- `initializer_list` initialization
 
 ## Time Complexity
 
 | Operation | Complexity |
 | --------- | ---------- |
 | Access    | O(1)       |
-| Search    | O(n)       |
 | Set       | O(1)       |
+| Search    | O(n)       |
 
 ## Space Complexity
 
@@ -51,7 +51,7 @@ Use a static array when:
 
 ## Implementation Checklist
 
-- [ ] Constructor
-- [ ] Destructor
-- [ ] operator[]()
-- [ ] size()
+- [x] Constructor
+- [x] Initializer list constructor
+- [x] operator[]()
+- [x] size()
