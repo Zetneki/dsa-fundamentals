@@ -9,9 +9,9 @@ can grow or shrink during runtime.
 
 The DynamicArray contains:
 
-- `m_data` — pointer to the dynamically allocated array
-- `m_size` — number of elements currently stored
-- `m_capacity` — number of elements that can currently be stored
+- `m_data` - pointer to the dynamically allocated array
+- `m_size` - number of elements currently stored
+- `m_capacity` - number of elements that can currently be stored
 
 ## Operations
 
