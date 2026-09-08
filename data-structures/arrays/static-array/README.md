@@ -8,7 +8,7 @@ A static array is an array whose size is fixed at compile time.
 
 The StaticArray contains:
 
-`m_data` — fixed-size array that stores the elements
+`m_data` - fixed-size array that stores the elements
 
 The array size is defined by the `N` template parameter and cannot be changed at runtime.
 
