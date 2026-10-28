@@ -2,7 +2,7 @@
 #include "AdjacencyList.hpp"
 
 int main() {
-  AdjacencyList<int, int> asd;
+  AdjacencyList<int, int> asd(false, false);
 
   asd.addVertex(23);
 

@@ -30,6 +30,22 @@ void AdjacencyList<T, W>::removeVertex(const T &vertex) {
   }
 }
 
+// creates an edge type object and adds it to edges
+// if m_weighted is false then it only gives 1 as weight otherwise the given value
+// based on m_directed only one or both directions are given to the edges
+// if both of the indexes are already in it exception is thrown
+template<typename T, typename W>
+void AdjacencyList<T, W>::addEdge(const T &from, const T &to, W weight) {
+  int fromIndex = indexOf(from);
+  int toIndex = indexOf(to);
+  if (fromIndex == -1 || toIndex == -1) throw std::invalid_argument("Vertex not found");
+
+  if (!m_weighted) weight = W{1};
+
+  m_vertices[fromIndex].edges.push_back(Edge{to, weight});
+  if (!m_directed) m_vertices[toIndex].edges.push_back(Edge{from, weight});
+}
+
 // returns the index value of the vertex from the m_vertices
 // returns -1 if the given value isn't found
 template<typename T, typename W>
@@ -40,8 +56,6 @@ int AdjacencyList<T, W>::indexOf(const T &vertex) const {
   return -1;
 }
 
-
-
 // addVertex(vertex): új csúcsot vesz fel üres éllistával. Ha már van ilyen csúcs, nem csinál semmit (vagy hibát dob), hogy ne legyen duplikáció.
 // removeVertex(vertex): törli a csúcsot a m_vertices-ből, és az összes többi csúcs éllistájából kiveszi azokat az éleket, amelyek rá mutatnak.
 // addEdge(from, to, weight): hozzáad egy Edge{to, weight}-et a from csúcs éllistájához. Irányítatlan gráfnál a to csúcs listájához is hozzáad egy Edge{from, weight}-et.
@@ -50,3 +64,13 @@ int AdjacencyList<T, W>::indexOf(const T &vertex) const {
 // hasVertex(vertex): igaz, ha a csúcs létezik (indexOf(vertex) != -1).
 // getOutDegree(vertex): a csúcs éllistájának mérete.
 // getAdjacentVertices(vertex): a csúcs éllistájából kigyűjti a to értékeket, és std::vector<T>-ként visszaadja.
+// printGraph: kirajzolja a gráfot:
+  // Undirected Graph Adjacency List:
+  // 0: 1 -> 2 -> NULL
+  // 1: 0 -> 2 -> NULL
+  // 2: 0 -> 1 -> NULL
+  //
+  // Directed Graph Adjacency List:
+  // 0: NULL
+  // 1: 2 -> 0 -> NULL
+  // 2: 0 -> NULL
