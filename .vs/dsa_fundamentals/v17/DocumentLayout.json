@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\programozas_projektek\\dsa_fundamentals\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\programozas_projektek\\dsa_fundamentals\\data-structures\\graphs\\adjacency-list\\AdjacencyList.hpp||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:data-structures\\graphs\\adjacency-list\\AdjacencyList.hpp||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\programozas_projektek\\dsa_fundamentals\\data-structures\\graphs\\adjacency-list\\AdjacencyList.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:data-structures\\graphs\\adjacency-list\\AdjacencyList.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\programozas_projektek\\dsa_fundamentals\\data-structures\\graphs\\adjacency-list\\AdjacencyList.ipp||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:data-structures\\graphs\\adjacency-list\\AdjacencyList.ipp||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\programozas_projektek\\dsa_fundamentals\\data-structures\\graphs\\adjacency-list\\AdjacencyList.ipp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:data-structures\\graphs\\adjacency-list\\AdjacencyList.ipp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\programozas_projektek\\dsa_fundamentals\\data-structures\\graphs\\adjacency-list\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:data-structures\\graphs\\adjacency-list\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\programozas_projektek\\dsa_fundamentals\\data-structures\\graphs\\adjacency-list\\main.cpp",
+              "RelativeDocumentMoniker": "data-structures\\graphs\\adjacency-list\\main.cpp",
+              "ToolTip": "D:\\programozas_projektek\\dsa_fundamentals\\data-structures\\graphs\\adjacency-list\\main.cpp",
+              "RelativeToolTip": "data-structures\\graphs\\adjacency-list\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-27T18:40:20.439Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,9 +45,9 @@
               "RelativeDocumentMoniker": "data-structures\\graphs\\adjacency-list\\AdjacencyList.hpp",
               "ToolTip": "D:\\programozas_projektek\\dsa_fundamentals\\data-structures\\graphs\\adjacency-list\\AdjacencyList.hpp",
               "RelativeToolTip": "data-structures\\graphs\\adjacency-list\\AdjacencyList.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-10-23T21:12:47.263Z",
+              "WhenOpened": "2026-10-27T18:40:13.663Z",
               "EditorCaption": ""
             },
             {
@@ -43,7 +60,7 @@
               "RelativeToolTip": "data-structures\\graphs\\adjacency-list\\AdjacencyList.ipp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-10-23T21:12:50.876Z",
+              "WhenOpened": "2026-10-27T18:30:32.065Z",
               "EditorCaption": ""
             }
           ]

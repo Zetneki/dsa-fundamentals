@@ -1,7 +1,10 @@
 #pragma once
-#include <vector>
 
-template  <typename T, typename W = int>
+#include <vector>
+#include <stdexcept>
+#include <cstddef>
+
+template <typename T, typename W = int>
 class AdjacencyList {
 public:
   explicit AdjacencyList(bool directed = false, bool weighted = false);
