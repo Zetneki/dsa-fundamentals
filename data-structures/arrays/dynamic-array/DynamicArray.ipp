@@ -68,7 +68,7 @@ size_t DynamicArray<T>::capacity() {
 
 // is_empty returns true if the array is empty, false otherwise
 template <typename T>
-bool DynamicArray<T>::is_empty() {
+bool DynamicArray<T>::isEmpty() {
   return m_size == 0;
 }
 

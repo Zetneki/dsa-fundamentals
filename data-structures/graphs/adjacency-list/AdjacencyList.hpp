@@ -3,6 +3,13 @@
 #include <vector>
 #include <stdexcept>
 #include <cstddef>
+#include <iostream>
+#include <algorithm>
+
+#define DIRECTED true
+#define NOT_DIRECTED false
+#define WEIGHTED true
+#define NOT_WEIGHTED false
 
 template <typename T, typename W = int>
 class AdjacencyList {
@@ -17,6 +24,7 @@ public:
 	bool hasVertex(const T &vertex) const;
 	int getOutDegree(const T &vertex) const;
 	std::vector<T> getAdjacentVertices(const T &vertex) const;
+	void printGraph(std::ostream &out = std::cout) const;
 
 private:
 	struct Edge {
@@ -32,7 +40,8 @@ private:
 	bool m_directed;
 	bool m_weighted;
 
-	int indexOf(const T &vertex) const;
+	int indexOfVertex(const T &vertex) const;
+	int indexOfEdge(const T &from, const T &to) const;
 };
 
 #include "AdjacencyList.ipp"

@@ -21,7 +21,7 @@ public:
   size_t size();
   size_t capacity();
 
-  bool is_empty();
+  bool isEmpty();
   
 private:
   size_t m_size; // number of elements

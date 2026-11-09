@@ -22,7 +22,7 @@ The DynamicArray contains:
 - `operator[]`
 - `size()`
 - `capacity()`
-- `is_empty()`
+- `isEmpty()`
 
 ## Resizing
 
