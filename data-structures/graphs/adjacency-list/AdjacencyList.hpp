@@ -22,7 +22,7 @@ public:
 	void removeEdge(const T &from, const T &to);
 	bool hasEdge(const T &from, const T &to) const;
 	bool hasVertex(const T &vertex) const;
-	int getOutDegree(const T &vertex) const;
+	std::size_t getOutDegree(const T &vertex) const;
 	std::vector<T> getAdjacentVertices(const T &vertex) const;
 	void printGraph(std::ostream &out = std::cout) const;
 

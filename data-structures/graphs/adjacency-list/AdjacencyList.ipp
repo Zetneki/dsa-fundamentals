@@ -111,6 +111,33 @@ bool AdjacencyList<T, W>::hasEdge(const T &from, const T &to) const {
   return indexOfEdge(from, to) != -1;
 }
 
+// returns the amount of (going out) edge a vertex has
+// throws exception if vertex is not found
+template<typename T, typename W>
+std::size_t AdjacencyList<T, W>::getOutDegree(const T &vertex) const {
+  int index = indexOfVertex(vertex);
+  if (index == -1) throw std::invalid_argument("Vertex not found at getOutDegree");
+
+  return m_vertices[index].edges.size();
+}
+
+// returns the vertices that can be reached from the given vertex with one edge
+// throws exception if the vertex is not found
+template<typename T, typename W>
+std::vector<T> AdjacencyList<T, W>::getAdjacentVertices(const T &vertex) const {
+  int index = indexOfVertex(vertex);
+  if (index == -1) throw std::invalid_argument("Vertex not found at getAdjacentVertices");
+
+  std::vector<T> adjacentVertices;
+  adjacentVertices.reserve(m_vertices[index].edges.size());
+
+  for (auto &edge : m_vertices[index].edges) {
+    adjacentVertices.push_back(edge.to);
+  }
+
+  return adjacentVertices;
+}
+
 // prints out the graph
 // T must support operator== and operator<< (e.g. int, std::string, or a custom type that defines them). W must support operator<<.
 template<typename T, typename W>
@@ -129,22 +156,3 @@ void AdjacencyList<T, W>::printGraph(std::ostream &out) const {
     out << "NULL" << std::endl;
   }
 }
-
-// addVertex(vertex): új csúcsot vesz fel üres éllistával. Ha már van ilyen csúcs, nem csinál semmit (vagy hibát dob), hogy ne legyen duplikáció.
-// removeVertex(vertex): törli a csúcsot a m_vertices-ből, és az összes többi csúcs éllistájából kiveszi azokat az éleket, amelyek rá mutatnak.
-// addEdge(from, to, weight): hozzáad egy Edge{to, weight}-et a from csúcs éllistájához. Irányítatlan gráfnál a to csúcs listájához is hozzáad egy Edge{from, weight}-et.
-// removeEdge(from, to): kiveszi a from listájából a to-ra mutató élt, irányítatlannál fordítva is.
-// hasEdge(from, to): igaz, ha a from éllistájában van to célú él.
-// hasVertex(vertex): igaz, ha a csúcs létezik (indexOfVertex(vertex) != -1).
-// getOutDegree(vertex): a csúcs éllistájának mérete.
-// getAdjacentVertices(vertex): a csúcs éllistájából kigyűjti a to értékeket, és std::vector<T>-ként visszaadja.
-// printGraph: kirajzolja a gráfot:
-  // Undirected Graph Adjacency List:
-  // 0: 1 -> 2 -> NULL
-  // 1: 0 -> 2 -> NULL
-  // 2: 0 -> 1 -> NULL
-  //
-  // Directed Graph Adjacency List:
-  // 0: NULL
-  // 1: 2 -> 0 -> NULL
-  // 2: 0 -> NULL

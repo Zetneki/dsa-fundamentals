@@ -59,22 +59,29 @@ int main() {
   // std::cout << (asd.hasVertex(test1) ? "has " : "doesn't have ") << "vertex " << test1 << std::endl;
 
   asd.addEdge(0, 1, 5);
-  asd.addEdge(0, 2);
-  asd.addEdge(2, 0);
-  asd.addEdge(2, 0);
+  //asd.addEdge(0, 2);
   //asd.addEdge(2, 0);
-  //asd.addEdge(2, 1);
-  //asd.addEdge(1, 0);
-  //asd.addEdge(1, 2);
-  //asd.addEdge(2, 3);
-  //asd.addEdge(2, 2);
-  //asd.addEdge(2, 2);
+  //asd.addEdge(2, 0);
+  //asd.addEdge(2, 0);
+  asd.addEdge(2, 1);
+  asd.addEdge(1, 0);
+  asd.addEdge(1, 2);
 
   asd.printGraph();
+
+  std::cout << asd.getOutDegree(0) << std::endl;
+  std::cout << asd.getOutDegree(1) << std::endl;
+  std::cout << asd.getOutDegree(2) << std::endl;
 
   std::cout << exmpl1 << " " << (asd.hasEdge(exmpl1, exmpl2) ? "has " : "doesn't have ")  << " " << exmpl2 << std::endl;
   std::cout << exmpl2 << " " << (asd.hasEdge(exmpl2, exmpl1) ? "has " : "doesn't have ")  << " " << exmpl1 << std::endl;
   std::cout << exmpl1 << " " << (asd.hasEdge(exmpl1, 0) ? "has " : "doesn't have ")  << " 0" << std::endl;
+
+
+  for (const auto &a: asd.getAdjacentVertices(1)) {
+    std::cout << a << std::endl;
+  }
+
 
   //asd.removeVertex(0);
 
