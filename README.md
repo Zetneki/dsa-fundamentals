@@ -24,3 +24,6 @@ README.md file structure example in [linked-lists README file](data-structures/l
 - Graph Algorithms
 - Dynamic Programming
 - ...
+
+## Additional DSA practice
+https://seanprashad.com/leetcode-patterns/
