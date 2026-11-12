@@ -1,3 +1,19 @@
+# IDE
+.idea/
+.vs/
+
+# Build output
+build/
+cmake-build-*/
+out/
+x64/
+Debug/
+Release/
+
+# Compiled files
 *.exe
 *.o
+*.obj
 *.out
+*.pdb
+*.ilk
