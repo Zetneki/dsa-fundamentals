@@ -146,13 +146,13 @@ void AdjacencyList<T, W>::printGraph(std::ostream &out) const {
 
   for (auto &vert: m_vertices) {
 
-    out << vert.value << ": ";
+    out << vert.value << ":";
 
     for (auto &e: vert.edges) {
-      if (m_weighted) out << e.to << " -(" << e.weight << ")-> ";
-      else out << e.to << " -> ";
+      if (m_weighted) out << " -(" << e.weight << ")-> " << e.to;
+      else out << " -> " << e.to;
     }
 
-    out << "NULL" << std::endl;
+    out << " -> NULL" << std::endl;
   }
 }

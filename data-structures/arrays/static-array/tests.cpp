@@ -1,6 +1,8 @@
 #include "StaticArray.hpp"
 #include <cassert>
 
+// tests: default (zero) initialization, partial initializer list (rest is zero),
+// full initializer list with strings, too many initializers throws out_of_range
 void testInitialization() {
   StaticArray<int, 3> arr = {};
   StaticArray<int, 5> arr2 = {1,2,3};
@@ -26,6 +28,7 @@ void testInitialization() {
   assert(exceptionThrown);
 }
 
+// tests: operator[] read and write, const access, out-of-range index throws out_of_range
 void testOperators() {
   StaticArray<int, 3> arr = {1,2,3};
 
@@ -55,6 +58,7 @@ void testOperators() {
   assert(exceptionThrown);
 }
 
+// tests: size equals the template parameter N
 void testSize() {
   StaticArray<int, 3> arr;
   assert(arr.size() == 3);

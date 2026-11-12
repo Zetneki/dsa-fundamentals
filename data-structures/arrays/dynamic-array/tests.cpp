@@ -1,6 +1,7 @@
 #include "DynamicArray.hpp"
 #include <cassert>
 
+// tests: push adds elements to the end, size grows, values readable by index
 void testPush() {
   DynamicArray<int> array;
   
@@ -14,6 +15,7 @@ void testPush() {
   assert(array[2] == 30);
 }
 
+// tests: pop returns the last element, removes it, size shrinks
 void testPop() {
   DynamicArray<int> array;
 
@@ -27,6 +29,7 @@ void testPop() {
   assert(array[0] == 10);
 }
 
+// tests: growing past the initial capacity (100 pushes) keeps size and all values intact
 void testResize() {
   DynamicArray<int> array;
 
@@ -41,6 +44,7 @@ void testResize() {
   }
 }
 
+// tests: capacity decreases after many pops (100 -> 20 elements)
 void testShrink() {
   DynamicArray<int> array;
 
@@ -57,6 +61,7 @@ void testShrink() {
   assert(array.size() == 20 && array.capacity() < tempCapacity);
 }
 
+// tests: operator[] read and write, set and get
 void testGetSet() {
   DynamicArray<int> array;
 

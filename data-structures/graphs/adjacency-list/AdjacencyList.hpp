@@ -5,6 +5,7 @@
 #include <cstddef>
 #include <iostream>
 #include <algorithm>
+#include <type_traits>
 
 #define DIRECTED true
 #define NOT_DIRECTED false
@@ -13,6 +14,8 @@
 
 template <typename T, typename W = int>
 class AdjacencyList {
+	static_assert(std::is_arithmetic_v<W>, "W must be a numeric type (int, double, ...)");
+
 public:
   explicit AdjacencyList(bool directed = false, bool weighted = false);
 
